@@ -6,10 +6,17 @@
   height: 32px;
   font-size: 14px;
   border: 1px solid #d9d9d9;
+  
+  &:hover {
+    color: lighten(green, 20%);
+    border-color: lighten(green, 20%)
+  }
+
   &:active {
     outline: 0;
     box-shadow: none;
     background: #fff;
     border-color: green;
+    color: green;
   }
 }

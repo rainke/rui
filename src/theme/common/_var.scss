@@ -1,0 +1,14 @@
+$main-color: #0078d4; //主题颜色
+$text-color: #f00; // 文字颜色
+$bg-color: #fff; //北京颜色
+
+// main
+$main-darker: darken($main-color, 20%);
+
+
+// Background
+// $black: mix($text-color, $bg-color, 80%)
+
+
+// foreground
+$black: darken($text-color, 20%)

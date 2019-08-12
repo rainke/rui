@@ -1,1 +1,16 @@
+@import 'common/var';
 @import 'button';
+
+.theme-list {
+    list-style: none;
+    padding: 0;
+    li {
+        float: left;
+        width:100px;
+        height:100px;
+        margin: 10px;
+        &.black {
+            background: $black;
+        }
+    }
+}
