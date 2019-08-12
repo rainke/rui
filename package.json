@@ -1,7 +1,6 @@
 {
   "name": "rui",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@types/jest": "24.0.17",
     "@types/node": "12.7.1",
@@ -16,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tsc": "tsc -p tsc.json && sass src/theme:css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +34,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "sass": "^1.22.9"
   }
 }
