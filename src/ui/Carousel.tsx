@@ -38,11 +38,10 @@ const Carousel = React.forwardRef<any, CarouselProps>(({ children }, ref) => {
     const timer = setTimeout(() => {
       next();
     }, 5000);
-    console.log(timer);
     return () => {
       clearTimeout(timer);
     };
-  }, []);
+  }, [activeIndex]);
   return (
     <div className="ui-carousel">
       {renderEl()}
