@@ -1,0 +1,16 @@
+.ui-fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    &.ui-fade-entering {
+        opacity: 1
+    }
+    &.ui-fade-entered {
+        opacity: 1
+    }
+    &.ui-fade-exiting {
+        opacity: 0
+    }
+    &.ui-fade-exited {
+        opacity: 0
+    }
+}
