@@ -1,14 +1,30 @@
 $main-color: #0078d4; //主题颜色
-$text-color: #f00; // 文字颜色
-$bg-color: #fff; //北京颜色
+$text-color: #333; // 文字颜色
+$bg-color: #fff; //背景颜色
 
 // main
-$main-darker: darken($main-color, 20%);
-
-
-// Background
-// $black: mix($text-color, $bg-color, 80%)
-
+$theme-darker:      darken($main-color, 15%);
+$theme-dark:        darken($main-color, 10%);
+$theme-dark-alt:    darken($main-color, 5%);
+$theme-primary:     $main-color;
+$theme-secondary:   lighten($main-color, 13.5%);
+$theme-tertiary:    lighten($main-color, 25%);
+$theme-light:       lighten($main-color, 40%);
+$theme-lighter:     lighten($main-color, 50%);
+$theme-lighter-alt: lighten($main-color, 55%);
 
 // foreground
-$black: darken($text-color, 20%)
+$bf-darker:         darken($text-color, 10%);
+$bf-dark:           darken($text-color, 5%);
+$bf-primary:        $text-color;
+$bf-primary-alt:    lighten($text-color, 30%);
+$bf-secondary:      lighten($text-color, 40%);
+$bf-tertiary:       lighten($text-color, 55%);
+
+// Background
+$bf-tertiary-alt:   darken($bg-color, 21.5%);
+$bf-quaternary-alt: darken($bg-color, 14.5%);
+$bf-light:          darken($bg-color, 8%);
+$bf-lighter:        darken($bg-color, 5%);
+$bf-lighter-alt:    darken($bg-color, 3%);
+$bf-white:          $bg-color;

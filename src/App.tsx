@@ -1,48 +1,20 @@
 import React from 'react';
 // import Theme from './ui/Theme';
-import Button from './ui/Button';
-import Carousel from './ui/Carousel'
-import Table from './ui/Table';
+// import Button from './ui/Button';
+// import Carousel from './ui/Carousel'
+import Input from './ui/Input';
+import Select, {Option} from './ui/Select';
 
 const App: React.FC = () => {
-  const ref = React.useRef<any>()
-  React.useEffect(() => {
-    // console.log(ref);
-  })
-
-  const columns = [{
-    prop: 'name',
-    title: 'name'
-  }, {
-    prop: 'age',
-    title:' 年龄'
-  }];
-  const data = [{
-    name: 'hehe',
-    age: '22'
-  }]
-  return (
-    <div className="App">
-      <Button ref={ref}>heheh</Button>
-      <div>
-      {/* <Theme /> */}
-      <Carousel>
-        <div style={{ backgroundColor: 'red' }}>
-          <h1>RED</h1>
-        </div>
-        <div style={{ backgroundColor: 'green' }}>
-          <h1 style={{textAlign: "center"}}>GREEN</h1>
-        </div>
-        <div style={{ backgroundColor: 'blue' }}>
-          <h1 style={{textAlign: "right"}}>BLUE</h1>
-        </div>
-      </Carousel>
-      </div>
-      <div>
-        <Table columns={columns} data={data}/>
-      </div>
-    </div>
-  );
+  const [v, setV] = React.useState('333')
+  return <div>
+    <Input placeholder="hello boys" disabled/>
+    <Select value={v}>
+      <Option value="333" label="jack">jack</Option>
+      <Option value="444" label="jack2">jack2</Option>
+      <div>xxx</div>
+    </Select>
+  </div>
 }
 
 export default App;

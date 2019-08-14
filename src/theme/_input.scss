@@ -1,0 +1,27 @@
+.ui-input {
+  .inline-input & {
+    display: inline-block;
+  }
+  input {
+    outline: none;
+    border-width: 0;
+    border: 1px solid $bf-tertiary;
+    color: $bf-primary;
+    height: 30px;
+    border-radius: 4px;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    transition: border-color .3s cubic-bezier(.645, .045, .355, 1);
+    &::placeholder {
+      color: $bf-secondary;
+    }
+    &:hover {
+      border-color: $bf-primary;
+    }
+    &:focus {
+      border-color: $theme-primary;
+    }
+  }
+}

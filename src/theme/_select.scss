@@ -1,0 +1,38 @@
+.ui-select {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    .ui-input input {
+      border-color: $bf-primary;
+    }
+  }
+  .ui-input {
+    pointer-events: none;
+    input {
+      user-select: none;
+    }
+  }
+  .ui-select-dropdown {
+    position: absolute;
+    top: 34px;
+    left:0;
+    width:100%;
+    box-shadow: 0 0 2px $bf-primary;
+    border-radius: 4px;
+    ul {
+      list-style: none;
+      padding: 5px 0;
+      margin: 0;
+      li {
+        padding: 5px 10px;
+        &.active {
+          background-color: $bf-lighter;
+        }
+        &:hover {
+          background-color: $bf-light;
+        }
+      }
+    }
+  }
+}

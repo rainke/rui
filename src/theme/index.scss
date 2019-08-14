@@ -3,6 +3,8 @@
 @import 'carousel';
 @import 'fade';
 @import 'table';
+@import 'input';
+@import 'select';
 
 .theme-list {
     list-style: none;
@@ -13,7 +15,64 @@
         height:100px;
         margin: 10px;
         &.black {
-            background: $black;
+            background: $bf-darker;
+        }
+        &.neutral-dark {
+            background: $bf-dark;
+        }
+        &.neutral-primary {
+            background: $bf-primary;
+        }
+        &.neutral-primary-alt {
+            background: $bf-primary-alt;
+        }
+        &.neutral-secondary {
+            background: $bf-secondary;
+        }
+        &.neutral-tertiary {
+            background: $bf-tertiary;
+        }
+        &.neutral-tertiary-alt {
+            background: $bf-tertiary-alt;
+        }
+        &.neutral-quaternary-alt {
+            background: $bf-quaternary-alt;
+        }
+        &.neutral-light {
+            background: $bf-light;
+        }
+        &.neutral-lighter {
+            background: $bf-lighter;
+        }
+        &.neutral-lighter-alt {
+            background: $bf-lighter-alt;
+        }
+        &.main-darker {
+            background: $theme-darker;
+        }
+        &.main-dark {
+            background: $theme-dark;
+        }
+        &.main-dark-alt {
+            background: $theme-dark-alt;
+        }
+        &.main-primary {
+            background: $theme-primary;
+        }
+        &.main-secondary {
+            background: $theme-secondary;
+        }
+        &.main-tertiary {
+            background: $theme-tertiary;
+        }
+        &.main-light {
+            background: $theme-light;
+        }
+        &.main-lighter {
+            background: $theme-lighter;
+        }
+        &.main-lighter-alt {
+            background: $theme-lighter-alt;
         }
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'clsx';
 
 interface TableColumn {
   prop: string;
@@ -9,12 +10,12 @@ interface TableProps extends React.HTMLAttributes<HTMLTableElement>, React.Class
   columns: TableColumn[];
   data: { [prop: string]: any }[];
 }
-const Table: React.FC<TableProps> = ({ columns, data }) => {
+const Table: React.FC<TableProps> = ({ columns, data, className, style, ...other }) => {
   return (
-    <table>
+    <table className={cx('ui-table', className)} style={style} {...other}>
       <colgroup>
         {columns.map((_, idx) => (
-          <col width="100" key={idx}/>
+          <col width="100" key={idx} />
         ))}
       </colgroup>
       <thead>

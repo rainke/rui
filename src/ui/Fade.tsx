@@ -30,7 +30,7 @@ const Fade: React.FC<FadeProps> = ({
       {state =>
         React.isValidElement(children)
           ? React.cloneElement(React.Children.only(children), {
-              className: cx(className, `ui-fade ui-fade-${state}`),
+              className: cx(className, children.props.className, `ui-fade ui-fade-${state}`),
               style: {
                 ...style,
                 ...children.props.style
