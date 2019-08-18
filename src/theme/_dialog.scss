@@ -1,0 +1,29 @@
+.ui-modal.ui-dialog {
+  .ui-dialog-content {
+    top: 200px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    border-radius: 4px;
+    .ui-dialog-header {
+      padding: 10px;
+      border-bottom: 1px solid $bf-light;
+      h2 {
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+    .ui-dialog-body {
+      padding: 10px;
+    }
+    .ui-dialog-footer {
+      border-top: 1px solid $bf-light;
+      padding: 20px;
+      text-align: center;
+      button {
+        margin: 0 5px;
+      }
+    }
+  }
+}

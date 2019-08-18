@@ -4,15 +4,15 @@ import React from 'react';
 // import Carousel from './ui/Carousel'
 // import Input from './ui/Input';
 // import Select, {Option} from './ui/Select';
-import Modal from './ui/Modal'
+import Dialog from './ui/Dialog'
 
 const App: React.FC = () => {
   const [open, setOpen] = React.useState(false)
   return <div>
     <button onClick={() =>setOpen(true)}>toggle {String(open)}</button>
-    <Modal open={open} onClose={() => setOpen(false)}>
+    <Dialog open={open} onClose={() => setOpen(false)}>
       <h1>hello 我是 modal</h1>
-    </Modal>
+    </Dialog>
   </div>
 }
 

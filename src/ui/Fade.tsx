@@ -25,14 +25,30 @@ const Fade: React.FC<FadeProps> = ({
     onExit && onExit(node);
   };
 
+  const fadeStyle: React.CSSProperties = {
+    transitionDuration: `${timeout}ms`
+  };
+
   return (
-    <Transition appear in={inProps} timeout={timeout} onEnter={handleEnter} onExit={handleExit} {...other}>
+    <Transition
+      appear
+      in={inProps}
+      timeout={timeout}
+      onEnter={handleEnter}
+      onExit={handleExit}
+      {...other}
+    >
       {state =>
         React.isValidElement(children)
           ? React.cloneElement(React.Children.only(children), {
-              className: cx(className, children.props.className, `ui-fade ui-fade-${state}`),
+              className: cx(
+                className,
+                children.props.className,
+                `ui-fade ui-fade-${state}`
+              ),
               style: {
                 ...style,
+                ...fadeStyle,
                 ...children.props.style
               }
             })
