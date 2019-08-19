@@ -1,4 +1,5 @@
 @import 'common/var';
+@import 'font/style.scss';
 @import 'button';
 @import 'carousel';
 @import 'fade';
@@ -7,6 +8,7 @@
 @import 'select';
 @import 'modal';
 @import 'dialog';
+@import 'notification';
 
 .theme-list {
     list-style: none;
