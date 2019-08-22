@@ -5,18 +5,15 @@ import {hot} from 'react-hot-loader';
 // import Carousel from './ui/Carousel'
 // import Input from './ui/Input';
 // import Select, {Option} from './ui/Select';
-import Notification, {message} from './ui/Notification'
+import Inotification from './ui/Notification'
 
 const App: React.FC = () => {
   const open = () => {
-    message({
-      type: 'info',
-      title: 'hello'
-    });
+    Inotification.info('hello');
   }
   return <div>
     <button onClick={() =>open()}>msg</button>
-    <Notification />
+    <Inotification />
   </div>
 }
 
