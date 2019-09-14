@@ -1,0 +1,16 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby develop"
+  },
+  "devDependencies": {
+    "gatsby-plugin-sass": "^2.1.14",
+    "gatsby-plugin-typescript": "^2.1.7"
+  },
+  "dependencies": {
+    "gatsby": "^2.15.14"
+  }
+}

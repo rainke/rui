@@ -1,0 +1,27 @@
+---
+name: Button
+---
+
+import { Playground, Props } from 'docz';
+import Button from './Button.tsx';
+import '../../css/index.css';
+
+# Button
+
+<Props of={Button} />
+
+I am a normal Button
+
+<Playground>
+  <Button>Click me</Button>
+  <Button type="primary">Click me</Button>
+</Playground>
+
+
+
+# Block Button
+
+<Playground>
+  <Button block>Click me</Button>
+  <Button type="primary" block>Click me</Button>
+</Playground>

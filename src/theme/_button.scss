@@ -1,16 +1,21 @@
 .ui-btn {
   outline: none;
+  display: inline-block;
   padding: 0 15px;
   line-height: 1.5;
   border-radius: 4px;
   height: 32px;
   font-size: 14px;
+  text-align: center;
   border: 1px solid $bf-secondary;
+  border-color: $bf-quaternary-alt;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .015);
   cursor: pointer;
   background-color: $bf-lighter;
+  transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
   &:hover {
-    color: $theme-primary;
-    border-color: $theme-primary
+    color: $theme-secondary;
+    border-color: $theme-secondary;
   }
 
   &:active {
@@ -19,5 +24,24 @@
     background-color: $bf-lighter;
     border-color: $theme-dark;
     color: $theme-dark;
+  }
+
+  &.ui-btn-block {
+    width: 100%;
+  }
+
+  &.ui-btn-primary {
+    background-color: $theme-primary;
+    border-color: $theme-primary;
+    color: $bf-lighter;
+    &:hover {
+      background-color: $theme-secondary;
+      border-color: $theme-secondary;
+    }
+  
+    &:active {
+      background-color: $theme-dark;
+      border-color: $theme-dark;
+    }
   }
 }

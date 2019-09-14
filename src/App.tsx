@@ -1,19 +1,19 @@
 import React from 'react';
 import {hot} from 'react-hot-loader';
-// import Theme from './ui/Theme';
-// import Button from './ui/Button';
-// import Carousel from './ui/Carousel'
-// import Input from './ui/Input';
-// import Select, {Option} from './ui/Select';
-import Inotification from './ui/Notification'
+import Popper from './ui/Popper';
+import Button from './ui/Button'
 
 const App: React.FC = () => {
-  const open = () => {
-    Inotification.info('hello');
+  const [node, setNode] = React.useState()
+  const toggle = (e: React.MouseEvent) => {
+    setNode(node ? null : e.target)
   }
   return <div>
-    <button onClick={() =>open()}>msg</button>
-    <Inotification />
+    <Button onClick={toggle}>click</Button>
+    <Popper reference={node} placement="right-end">
+      hello
+    </Popper>
+    <p>hhe</p>
   </div>
 }
 

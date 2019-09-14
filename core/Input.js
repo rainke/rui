@@ -10,10 +10,10 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import clsx from 'clsx';
-const Button = React.forwardRef((_a, ref) => {
-    var { children, block = false, className, type = 'default', submit = false } = _a, other = __rest(_a, ["children", "block", "className", "type", "submit"]);
-    const clsn = clsx(className, 'ui-btn', `ui-btn-${type}`, { 'ui-btn-block': block });
-    return (React.createElement("button", Object.assign({ className: clsn, ref: ref }, other, { type: submit ? 'submit' : 'button' }), children));
+import cx from 'clsx';
+const Input = React.forwardRef((_a, ref) => {
+    var { className, style, placeholder } = _a, other = __rest(_a, ["className", "style", "placeholder"]);
+    return (React.createElement("div", { className: cx('ui-input', className), style: style },
+        React.createElement("input", Object.assign({ type: "text", ref: ref, placeholder: placeholder }, other))));
 });
-export default Button;
+export default Input;

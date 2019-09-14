@@ -9,11 +9,11 @@ interface DialogTitleProps {
   title?: string;
 }
 const DialogTitle: React.FC<DialogTitleProps> = ({ title }) => {
-  return (
+  return title ?(
     <header className="ui-dialog-header">
       <h2>{title}</h2>
     </header>
-  );
+  ): null;
 };
 
 interface DialogFooterProps {
@@ -23,8 +23,8 @@ interface DialogFooterProps {
 const DialogFooter: React.FC<DialogFooterProps> = ({ onClose, onOk }) => {
   return (
     <footer className="ui-dialog-footer">
-      <Button onClick={onOk}>确定</Button>
-      <Button onClick={onClose}>取消</Button>
+      <Button onClick={onOk} type="primary">确 定</Button>
+      <Button onClick={onClose}>取 消</Button>
     </footer>
   );
 };
@@ -35,13 +35,15 @@ interface DialogProps {
   onOk?: () => void;
   children: React.ReactNode;
   Footer?: React.ComponentType<DialogFooterProps>;
+  title?: string;
 }
 const Dialog: React.FC<DialogProps> = ({
   open,
   onClose,
   onOk,
   children,
-  Footer = DialogFooter
+  Footer = DialogFooter,
+  title
 }) => {
   const [keep, setkeep] = useState(false);
   const entering = () => {
@@ -59,7 +61,7 @@ const Dialog: React.FC<DialogProps> = ({
         contentClassName="ui-dialog-content"
       >
         <div>
-          <DialogTitle title={'hello title'} />
+          <DialogTitle title={title} />
           <section className="ui-dialog-body">{children}</section>
           <Footer onClose={onClose} onOk={onOk} />
         </div>

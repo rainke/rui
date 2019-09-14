@@ -1,6 +1,11 @@
 {
   "name": "@rainke/react-rui",
   "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
   "dependencies": {
     "@rainke/react-rui": "^0.1.0",
     "@types/jest": "24.0.17",
@@ -10,6 +15,7 @@
     "@types/react-transition-group": "^4.2.2",
     "clsx": "^1.0.4",
     "lodash.template": "4.5.0",
+    "popper.js": "^1.15.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",
@@ -17,11 +23,11 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "start": "node scripts/start.js development",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "tsc": "tsc -p tsc.json && sass src/theme:css"
+    "docs:dev": "yarn workspace docs dev",
+    "start": "yarn docs:dev",
+    "tsc": "tsc -p tsc.json && sass src/theme:css",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +35,7 @@
   "devDependencies": {
     "@hot-loader/react-dom": "^16.9.0",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
+    "lerna": "^3.13.3",
     "node-sass": "^4.12.0",
     "react-hot-loader": "^4.12.11",
     "sass": "^1.22.9",

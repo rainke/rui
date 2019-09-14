@@ -12,6 +12,7 @@ module.exports = function(service) {
           .test(/\.js$/)
           .exclude
             .add(/@babel(?:\/|\\{1,2})runtime/)
+            .add(/node_modules/)
             .end()
           .use('babel-loader')
             .loader('babel-loader');

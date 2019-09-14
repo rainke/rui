@@ -1,0 +1,29 @@
+{
+  "name": "rui-theme",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "何彭 <rainke@magicare.me>",
+  "homepage": "https://github.com/rainke/rui#readme",
+  "license": "ISC",
+  "main": "lib/rui-theme.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rainke/rui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/rainke/rui/issues"
+  }
+}
